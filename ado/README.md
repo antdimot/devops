@@ -1,1 +1,0 @@
-# Azure Devops Powershell Scripts
