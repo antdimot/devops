@@ -11,7 +11,7 @@ $confluence_token   = "your api token" # https://id.atlassian.com/manage-profile
 ```
 
 ```powershell
-# Create a new page to Confluence
+# Create a new page on Confluence
 Import-Module .\ConfluencePageManagement.psm1
 
 $result = New-ConfluencePage    -Domain $confluence_domain  `
@@ -23,7 +23,7 @@ $result = New-ConfluencePage    -Domain $confluence_domain  `
 ```
 
 ```powershell
-# Get page information from Confluence
+# Get page's content from Confluence
 Import-Module .\ConfluencePageManagement.psm1
 
 $result = Get-ConfluencePage    -Domain $confluence_domain    `
@@ -33,7 +33,7 @@ $result = Get-ConfluencePage    -Domain $confluence_domain    `
 ```
 
 ```powershell
-# Update page information to Confluence
+# Update page information on Confluence
 Import-Module .\ConfluencePageManagement.psm1
 
 $result = Update-ConfluencePage -Domain $confluence_domain  `
