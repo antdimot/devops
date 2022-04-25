@@ -30,8 +30,6 @@ PageId Link
 
 ```powershell
 # Get page's content from Confluence
-Import-Module .\ConfluencePageManagement.psm1
-
 $result = Get-ConfluencePage    -Domain $confluence_domain    `
                                 -User $confluence_user        `
                                 -Token $confluence_token      `
@@ -48,8 +46,6 @@ Link    : https://<<your-domain>>.atlassian.net/wiki/<<tiny-ui-link>>
 
 ```powershell
 # Update page information on Confluence
-Import-Module .\ConfluencePageManagement.psm1
-
 $result = Update-ConfluencePage -Domain $confluence_domain              `
                                 -User $confluence_user                  `
                                 -Token $confluence_token                `
