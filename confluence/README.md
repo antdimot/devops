@@ -51,7 +51,7 @@ $result = Update-ConfluencePage -Domain $confluence_domain              `
                                 -Token $confluence_token                `
                                 -PageId 360449                          `
                                 -Title "Hello World Updated!"           `
-                                -Content "I hhave just updated the content of page."
+                                -Content "I updated the content of page."
 $result
 
 IsOk Version Link
