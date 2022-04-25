@@ -1,13 +1,14 @@
 # Powershell Confluence Scripts
 
-Goal of this library is make easy get, update and create Confluence's pages by using powershell.
+Goal of this library is make easy create, get and update [Confluence](https://www.atlassian.com/it/software/confluence)'s page by using powershell.
 
-### Examples
+## Examples
 ```powershell
 # Define Confluence security env variables
 $confluence_domain  = "https://<<your-domain>>.atlassian.net"
-$confluence_user    = "your confluence email address"
-$confluence_token   = "your api token" # https://id.atlassian.com/manage-profile/security/api-tokens
+$confluence_user    = "your confluence-email-address"
+$confluence_token   = "your api-token" 
+# You can generate your api token at  https://id.atlassian.com/manage-profile/security/api-tokens
 ```
 
 ```powershell
@@ -18,8 +19,13 @@ $result = New-ConfluencePage    -Domain $confluence_domain  `
                                 -User $confluence_user      `
                                 -Token $confluence_token    `
                                 -Space "demo"               `
-                                -Title "New Page"           `
+                                -Title "Hello World"        `
                                 -Content "This is a new page."
+$result
+
+PageId Link
+------ ----
+360449 https://<<your-domain>>.atlassian.net/wiki/<<tiny-ui-link>>
 ```
 
 ```powershell
@@ -29,17 +35,30 @@ Import-Module .\ConfluencePageManagement.psm1
 $result = Get-ConfluencePage    -Domain $confluence_domain    `
                                 -User $confluence_user        `
                                 -Token $confluence_token      `
-                                -PageId 33032
+                                -PageId 360449
+$result
+
+Title   : "Hello World"
+Version : 1
+Space   : DEMO
+Content : "This is a new page."
+Status  : current
+Link    : https://<<your-domain>>.atlassian.net/wiki/<<tiny-ui-link>>
 ```
 
 ```powershell
 # Update page information on Confluence
 Import-Module .\ConfluencePageManagement.psm1
 
-$result = Update-ConfluencePage -Domain $confluence_domain  `
-                                -User $confluence_user      `
-                                -Token $confluence_token    `
-                                -PageId 33032               `
-                                -Title "Hello World"        `
-                                -Content "Its only for test."
+$result = Update-ConfluencePage -Domain $confluence_domain              `
+                                -User $confluence_user                  `
+                                -Token $confluence_token                `
+                                -PageId 360449                          `
+                                -Title "Hello World Updated!"           `
+                                -Content "I hhave just updated the content of page."
+$result
+
+IsOk Version Link
+---- ------- ----
+True       2 https://<<your-domain>>.atlassian.net/wiki/<<tiny-ui-link>>
 ```
