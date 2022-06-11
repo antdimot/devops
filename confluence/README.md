@@ -1,4 +1,4 @@
-# Powershell Confluence Scripts
+# Confluence Powershell Scripts
 
 Goal of this library is make easy get, update and create Confluence's pages by using powershell.
 
