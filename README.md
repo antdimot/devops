@@ -1,6 +1,6 @@
-# Powershell Scripts
+# Devops Scripts
 
-A collection of useful powershell scripts for managing external tools.
+A collection of useful powershell scripts.
 
 ## Tables of contents
 
