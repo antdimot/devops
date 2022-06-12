@@ -1,12 +1,14 @@
 # Azure Devops Powershell Scripts
 
-Goal of this library is run a set of ado pipeline by using a single powershell's command.
+## Bulkrun
+
+Goal of this script is run a set of ado pipeline by using a single powershell's command.
 
 The script uses Azure Devops API rest and it requires a [Personal Access Token](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
 
 ### Example
 ```yaml
-# Step 1: Create the pipeline on Azure Devops with following yaml code
+# Step 1: Create the pipeline on Azure Devops with following yaml code. Below an example with parameters.
 
 parameters:
   - name: name
@@ -25,7 +27,10 @@ steps:
 ```  
 
 ```powershell
-# Step 2: Create a pipeline definition file called pipetorun.csv which the information to run an ado pipeline for each row.
+# Step 2: Create a pipeline definition file (pipetorun.csv) with the information to run an ado pipeline for each row.
+# The definitionid is the definitionid of Azure Devops pipeline
+# Branch is the pipeline's branch.
+# Parameters are defined as a dictionary (key=value separate by semicolon, key is equal the pipeline parameter name)
 
 definitionid,name,branch,parameters
 12,hello,main,name=Alan;surname=Turing
