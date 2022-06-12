@@ -1,6 +1,6 @@
 # Azure Devops Powershell Scripts
 
-## Bulkrun
+## BulkRun
 
 Goal of this script is run a set of ado pipeline by using a single powershell's command.
 
