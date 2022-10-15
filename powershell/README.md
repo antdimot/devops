@@ -1,7 +1,5 @@
 # Powershell Scripts
 
-This is a set of utils powershell scripts.
-
 ## Expand-JsonFile
 This small script is able to resolve cross json property reference.
 
