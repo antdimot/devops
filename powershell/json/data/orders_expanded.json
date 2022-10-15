@@ -1,0 +1,16 @@
+[
+  {
+    "created": "2022-10-15T09:00:00",
+    "product": "xbox",
+    "quantity": 1,
+    "customer": "Paperino",
+    "notes": "this is a note"
+  },
+  {
+    "created": "2022-10-15T10:00:00",
+    "product": "playstation",
+    "quantity": 2,
+    "customer": "Paperino",
+    "notes": "this is a note2"
+  }
+]
