@@ -1,0 +1,16 @@
+[
+    {
+        "created":"2022-10-15T09:00:00",
+        "product":"[data/products(pid=1).title]",
+        "quantity":1,
+        "customer":"[data/customers(cid=3).name]",
+        "notes":"this is a note"
+    },
+    {
+        "created":"2022-10-15T10:00:00",
+        "product":"[data/products(pid=2).title]",
+        "quantity":2,
+        "customer":"[data/customers(cid=3).name]",
+        "notes":"this is a note2"
+    }
+]
