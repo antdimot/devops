@@ -34,26 +34,6 @@ function Set-JsonFile {
     }
 }
 
-function Get-Conditions {
-    param (
-        [Parameter(Mandatory)]
-        [string]$Query
-    )
-
-    $result = @{}
-
-    $tokens = $Query.Split(",")
-
-    $tokens | ForEach-Object {
-        $condition = $_.Split("=")
-
-        $result.Add( $condition[0], $condition[1] )
-    }
-
-    return $result
-}
-
-
 function Get-PropertyValue {
     param (
         [Parameter(Mandatory)]
@@ -77,25 +57,19 @@ function Get-PropertyValue {
         $metadata_query = [regex]::Matches( $expression, '\([a-z0-9,=?]*\)').Value
         $metadata_query =  $metadata_query.substring(1,$metadata_query.Length-2)
 
-        $conditions = Get-Conditions -Query $metadata_query
-        $keys = $conditions.Keys -as [string[]]
-        $values = $conditions.Values -as [string[]]
+        $condition =  $metadata_query.Split("=")
+
+        if( $condition.length -ne 2 ) {
+            Write-Error "Condition $metadata_query is not well formed."
+        }
 
         try {
             $metadata_file = Get-JsonFile -File "$metadata_type.json"
 
             $metadata_parameter = $metadata_file
 
-            if( $keys.Count -eq 2 ) {
-                $metadata_parameter = $metadata_file | Where-Object { 
-                    $_.("$($keys[0])") -EQ "$($values[0])" -and
-                    $_.("$($keys[1])") -EQ "$($values[1])"
-                }
-            }
-            else {
-                $metadata_parameter = $metadata_file | Where-Object { 
-                    $_.("$($keys[0])") -EQ "$($values[0])"
-                }
+            $metadata_parameter = $metadata_file | Where-Object { 
+                $_.("$($condition[0])") -EQ "$($condition[1])"
             }
             
             $metadata_property = [regex]::Matches( $expression, '\.[a-z.]*').Value

@@ -3,7 +3,7 @@
         "created":"2022-10-15T09:00:00",
         "product":"[data/products(pid=1).title]",
         "quantity":1,
-        "customer":"[data/customers(cid=3).name]",
+        "customer":"[data/customers(cid=2).name]",
         "notes":"this is a note"
     },
     {
