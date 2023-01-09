@@ -37,9 +37,7 @@ The *orders.json* has some property (product and customer) needs to be calculate
 The function **Expand-JsonFile** evaluates the reference expressions into orders.json file and produce a new file:
 
 ```powershell
-# example.ps1
-
-. .\lib.ps1
+import-module -name .\ADMjson.psm1 -Force
 Expand-JsonFile -SourceFile data/orders.json -TargetFile data/orders_expanded.json
 ```
 
