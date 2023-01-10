@@ -23,12 +23,12 @@ PS > get-secretinfo -vault mySecretStore | fl
 Name      : secret1
 Type      : String
 VaultName : mySecretStore
-Metadata  : {[varname, appid], [envname, dev]}
+Metadata  : {[varname, var1], [envname, dev]}
 
 Name      : secret2
 Type      : String
 VaultName : mySecretStore
-Metadata  : {[varname, secret], [envname, dev]}
+Metadata  : {[varname, var2], [envname, dev]}
 
 # import my functions for loading secrets
 Import-Module .\ADMsecret.psm1
