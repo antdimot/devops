@@ -1,8 +1,7 @@
 # Expand-JsonFile
-This small script is able to resolve cross json property reference.
+This small script is able to resolve cross property reference.
 
-Example:
-
+### Example
 Into the data folder there are three json files:
 
 - [customers.json](data/customers.json) contains a set of customers
@@ -36,6 +35,7 @@ The function **Expand-JsonFile** evaluates the reference expressions into orders
 
 ```powershell
 import-module -name .\ADMjson.psm1 -Force
+
 Expand-JsonFile -SourceFile data/orders.json -TargetFile data/orders_expanded.json
 ```
 
