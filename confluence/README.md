@@ -1,8 +1,8 @@
-# Confluence Powershell Scripts
+# Confluence Scripts
 
+## ConfluencePageManagement
 Goal of this library is make easy create, get and update [Confluence](https://www.atlassian.com/it/software/confluence)'s page by using powershell.
 
-## Examples
 ```powershell
 # Define Confluence security env variables
 $confluence_domain  = "https://<<your-domain>>.atlassian.net"

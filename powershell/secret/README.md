@@ -1,6 +1,4 @@
-# Powershell Scripts
-
-## Set-VariablesFromKeyVault
+# Set-VariablesFromKeyVault
 This small script is able to load keyvault secrets to powershell variables
 
 ### Example:

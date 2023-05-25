@@ -2,7 +2,6 @@
 
 Starting a complete development environment for postgres.
 
-
 ## Usage
 1) Define your environment's parameters by using .env settings file.
 

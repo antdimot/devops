@@ -1,4 +1,4 @@
-# Azure Devops Powershell Scripts
+# Azure Devops Scripts
 
 ## BulkRun
 

@@ -1,18 +1,16 @@
-# Powershell Scripts
-
-## Expand-JsonFile
+# Expand-JsonFile
 This small script is able to resolve cross json property reference.
 
 Example:
 
 Into the data folder there are three json files:
 
-- customers.json (which contains a set of customer)
-- products.json (which contains a set of product)
-- orders.json (which contains a set of order)
+- [customers.json](data/customers.json) contains a set of customers
+- [products.json](data/products.json) contains a set of products
+- [orders](data/orders.json) contains a set of orders
 
 
-The *orders.json* has some property (product and customer) needs to be calculated by evaluate a reference expression:
+The *orders.json* has some properties (product and customer) needs to be calculated by evaluate a reference expression:
 
 ```json
 // orders.json
