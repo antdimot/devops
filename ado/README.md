@@ -1,8 +1,6 @@
-# Azure Devops Powershell Scripts
+# BulkRun
 
-## BulkRun
-
-Goal of this script is run a set of ado pipeline by using a single powershell's command.
+Goal of this script is run a set of ado pipelines by using a single powershell's command.
 
 The script uses Azure Devops API rest and it requires a [Personal Access Token](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
 
