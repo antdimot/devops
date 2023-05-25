@@ -1,6 +1,6 @@
 <#
 	.Synopsis
-  	Load secrets from KeyVault and set it as powershell variable.
+  	Load secrets from Vault and set it as powershell variable.
 
  	.Description
   	Create powershell variables with secret information retrieved from KeyVault
@@ -11,7 +11,7 @@
 	.Parameter Envname
   	Vault name.
 #>
-function Set-VariablesFromKeyVault {
+function Set-VariablesFromVault {
 	param(
 		[Parameter(Mandatory=$true)]
 		[string] $envname,
@@ -48,7 +48,7 @@ function Set-VariablesFromKeyVault {
 	.Parameter Envname
   	Vault name.
 #>
-function Remove-VariablesByKeyVault {
+function Remove-VariablesByVault {
 	param(
 		[Parameter(Mandatory=$true)]
 		[string] $envname,
@@ -70,5 +70,5 @@ function Remove-VariablesByKeyVault {
 	}
 }
 
-Export-ModuleMember -Function Set-VariablesFromKeyVault
-Export-ModuleMember -Function Remove-VariablesByKeyVault
+Export-ModuleMember -Function Set-VariablesFromVault
+Export-ModuleMember -Function Remove-VariablesByVault
