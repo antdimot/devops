@@ -37,9 +37,9 @@ Set-VariablesFromVault -vaultname mySecretStore -envname dev
 # check the results
 PS > get-variable
 
-Name                     Value
-----                     -----
-dev_var1                 this-is-the-value-for-secret1
-dev_var2                 this-is-the-value-for-secret2
-......................................................
+Name                 Value
+----                 -----
+var1                 this-is-the-value-for-secret1
+var2                 this-is-the-value-for-secret2
+...................................................
 ```

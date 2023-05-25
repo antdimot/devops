@@ -23,7 +23,7 @@ function Set-VariablesFromVault {
 
 	try {
 		$vault_items | foreach-object {
-			$new_var_name = $envname + "_" + $_.metadata.varname
+			$new_var_name = $_.metadata.varname
 	
 			$new_var_value = get-secret $_.name -vault $vaultname -asplaintext
 	
