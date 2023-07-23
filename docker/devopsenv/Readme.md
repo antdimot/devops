@@ -1,5 +1,5 @@
 # DevopsENV
-This project provides a docker image with useful devops's tools.
+This project provides a docker image with a set of useful tools.
 
 ## Build DevopsENV
 docker build . -t devopsenv:1.0

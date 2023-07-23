@@ -1,0 +1,9 @@
+{
+  "parent-property1": "@Microsoft.KeyVault(SecretUri=https://<<your-keyvault-resource>>.vault.azure.net/secrets/<<your-secret1>>)",
+  "Values":
+  {    
+    "nested-property2": "@Microsoft.KeyVault(SecretUri=https://<<your-keyvault-resource>>.vault.azure.net/secrets/<<your-secret2>>)",
+    "nested-property3": "@Microsoft.KeyVault(SecretUri=https://<<your-keyvault-resource>>.vault.azure.net/secrets/<<your-secret3>>)",
+    "non-keyvault-property": "<<any-value>>"
+  }
+}
