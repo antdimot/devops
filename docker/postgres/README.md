@@ -21,7 +21,7 @@ PGADMIN_PASSWORD=<<pgadmin-password>>
 
 2) Create into the folder config/certs the server certification files for nginx with following command:
 ```shell
-openssl req -x509 -newkey rsa:4096 -sha256 -days 365 -nodes -keyout server.key -out server.crt -subj '/CN=localhost'
+openssl req -x509 -newkey rsa:4096 -sha256 -days 365 -nodes -keyout server.key -out ./config/certs/server.crt -subj '/CN=localhost'
 ```
 
 3) Spin up the evironment with docker compose:
