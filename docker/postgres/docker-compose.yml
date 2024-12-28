@@ -16,11 +16,11 @@ services:
       - ${NGINX_HOSTPORT}:${NGINX_HOSTPORT}
       - 443:443
 
-  pgadmin:
+  admin:
     image: dpage/pgadmin4:${PGADMIN_RELEASE}
     container_name: ${ENV_NAME}_pgadmin
     depends_on:
-      - postgres
+      - db
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
@@ -30,13 +30,14 @@ services:
     volumes:
       - pga_data:/var/lib/pgadmin
 
-  postgres:
+  db:
     image: postgres:${POSTGRES_RELEASE}
     container_name: ${ENV_NAME}_postgres
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - ps_data:/var/lib/postgresql/data
     networks:

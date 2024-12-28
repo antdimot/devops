@@ -1,2 +1,4 @@
 .ds_store
-_MY_ENV/**/*
+_ENV/**/*
+**/*/*.crt
+**/*/*.key
