@@ -13,6 +13,7 @@ NGINX_HOSTPORT=8081
 POSTGRES_RELEASE=17.2
 POSTGRES_USER=<<postgres-user>>
 POSTGRES_PASSWORD=<<postgres-password>>
+POSTGRES_DB=<<postgres-db>>
 
 PGADMIN_RELEASE=latest
 PGADMIN_EMAIL=<<pgadmin-user>>
